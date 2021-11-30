@@ -1,11 +1,10 @@
-"""
 # Definition for a Node.
 class Node:
     def __init__(self, val, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-"""
+
 
 
 class Solution:
@@ -20,9 +19,7 @@ class Solution:
             while curr:
                 stack.append(curr)
                 curr = curr.left
-            # print(stack)
             curr = stack.pop()
-            value = head.right.val if head.right else None
 
             last.right = curr
             curr.left = last
